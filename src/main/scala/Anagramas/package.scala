@@ -4,7 +4,17 @@ package object Anagramas {
   type Palabra = String
   type Frase = List[Palabra]
   type Occurrencias = List[(Char, Int)]
-  val diccionario: List[Palabra] = List("cosas", "como", "yo", "y", "ocasos", "oca", "cayo", "mocosos", "roca", "moco", "sos")
+  val diccionario: List[Palabra] = List(
+    "cosas", "como", "yo", "y", "ocasos", "oca", "cayo", "mocosos", "roca", "moco", "sos",
+    "caso", "saco", "cosa", "caos", "ocas", "casos",
+    "caro", "orca", "arco",
+    "amor", "roma", "ramo", "mora",
+    "sol", "los", "sal", "las", "sala", "alas",
+    "casa", "saca", "rosa", "osar", "sosa", "osas",
+    "paso", "sopa", "peso", "pose", "lata", "alta", "tala",
+    "nos", "son", "es", "se", "el", "le", "la", "al",
+    "coma", "mar", "rama", "cama", "mesa", "soy", "lago", "luna", "mina", "no", "si", "de", "con", "un"
+  )
 
   def lOcPal(p: Palabra): Occurrencias = {
     val hashMap = p.toList.groupBy((c: Char) => c)
@@ -24,9 +34,7 @@ package object Anagramas {
       case None => Nil
     }
   }
-
-
-
+  
   def combinaciones(lOcurrencias: Occurrencias): List[Occurrencias] = {
     lOcurrencias match {
       case Nil => List(Nil)
