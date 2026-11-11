@@ -28,11 +28,11 @@ combinaciones(Nil)
 combinaciones(lOcPal("hola"))
 
 //Complemento de una lista de ocurrencias
-complemento(List(('a', 2), ('b', 2),('c',3)),List(('z',4)))
+complemento(List(('a', 2), ('b', 2),('c',3)), Nil)
 complemento(List(('z',4)), List(('z',3)))
 complemento(List(('x', 1), ('y', 2),('z',4)), List(('x',1)))
 complemento(lOcPal("hola"), lOcPal("ola"))
-complemento(lOcFrase(List("en","algun","lugar","de","la","mancha")), lOcFrase(List("cuyo","nombre","no","quiero","acordarme")))
+complemento(lOcFrase(List("en","algun","lugar","de","la","mancha")), lOcFrase(List("la","mancha","de","algun","lugar")))
 
 //Anagramas de una frase
 anagramasDeFrase(List("ramo", "de", "rosa"))
