@@ -41,3 +41,8 @@ anagramasDeFrase(Nil)
 anagramasDeFrase(List("tala", "el", "ramo"))
 anagramasDeFrase(List("soy","yo"))
 
+//Casos de prueba generados por la IA
+lOcFrase(List("", "ab"))
+complemento(List(('a',2),('b',1)), List(('a',2),('b',1)))
+anagramasDeFrase(List(""))
+
